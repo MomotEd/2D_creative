@@ -6,6 +6,17 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" /> 
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script> 
 <script type="text/javascript">
+function bind(func, context) {
+  return func.call(context);
+};
+
+SetOpacity = function (){
+	 $('.navbar').children().css("opacity", "0.3");
+	 this.style ="opacity : 1";
+	 $(this).prev('li').css("opacity" , "0.7");
+	 $(this).next('li').css("opacity" , "0.7");
+};
+
 $(document).ready(function() {
 	setTimeout ("$('#logo').fadeIn('slow');", 1000);
 	setTimeout ("$('.menu').fadeIn('slow');", 1500);
@@ -18,11 +29,11 @@ $(document).ready(function() {
 <div class="main">
 	<div id="logo"><img src="img/logo.png" alt="logo" /></div>
 	<div class="menu">
-		<ul id="navbar">
-			<li> Ромб </li>
-			<li> Видео </li>
-			<li> Сотрудничество </li>
-			<li> Контакты </li>
+		<ul class ="navbar">
+			<li onclick="bind(SetOpacity, this)"> РОМБ </li>
+			<li onclick="bind(SetOpacity, this)"> ВИДЕО </li>
+			<li onclick="bind(SetOpacity, this)"> СОТРУДНИЧЕСТВО </li>
+			<li onclick="bind(SetOpacity, this)"> КОНТАКТЫ </li>
 		</ul>	
 	</div>
 	<div class="floor"><a href='#' class='button'>'</a></div> 
