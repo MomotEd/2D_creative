@@ -5,16 +5,22 @@
 <title>2D creative</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" /> 
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script> 
+<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 <script type="text/javascript">
 function bind(func, context) {
   return func.call(context);
 };
 
 SetOpacity = function (){
+	console.log($(this).text())
 	 $('.navbar').children().css("opacity", "0.3");
 	 this.style ="opacity : 1";
 	 $(this).prev('li').css("opacity" , "0.7");
 	 $(this).next('li').css("opacity" , "0.7");
+	 if ($(this).text()=='РОМБ') {$.scrollTo('.main');}
+	 else if ($(this).text()=='ВИДЕО'){$.scrollTo('.main');}
+	 else if ($(this).text()=='СОТРУДНИЧЕСТВО'){$.scrollTo('.main');}
+	 else {$.scrollTo('.main');}
 };
 
 $(document).ready(function() {
