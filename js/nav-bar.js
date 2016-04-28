@@ -19,3 +19,28 @@ $(document).ready(function() {
 	setTimeout ("$('.nav').fadeIn('slow');", 1500);
 	setTimeout ("$('.scroll-container').fadeIn('slow');", 2000);
 });
+
+window.onscroll = function() {		
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  var ScreenHeight = document.documentElement.clientHeight;
+  var FirstMark  = ScreenHeight/2;
+  var SecondMark = ScreenHeight+FirstMark;
+  var ThirdMark  = ScreenHeight*3-FirstMark;
+  var Marks = [FirstMark, SecondMark, ThirdMark];
+  a = find(Marks, scrolled);
+  if (a>1){
+	  context = $('.current').next();
+	  bind(SetOpacity,context);
+    };
+}
+
+function find(array, value) {
+
+  for (var i = 0; i < array.length; i++) {
+	console.log(array[i] < value);
+	console.log((value - array[i])< value);
+    if (array[i] < value && (value - array[i])< value) return 1;
+  }
+
+  return -1;
+}
