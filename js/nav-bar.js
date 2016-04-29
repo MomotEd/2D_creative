@@ -20,14 +20,29 @@ $(document).ready(function() {
 	setTimeout ("$('.scroll-container').fadeIn('slow');", 2000);
 });
 
-window.onwheel = function() {		
+window.onwheel = function(e) {		
+	  e = e || window.event;
 	  
-	  context = $('.current').next();
+	  var delta = e.deltaY || e.detail || e.wheelDelta;
+	  
+	  if (delta > 0){
+		context = $('.current').next();
+	  }
+	  else {
+		  context = $('.current').prev();
+	  }
+	  
 	  console.log(context.text());
 	  if (context.text()!==''){
 		bind(SetOpacity,context);}
-	  else {context = $('.nav:first-child');
-		bind(SetOpacity,context);};
+	  else {
+		let NavElements = $('.nav').children();
+		for (let i=0; i < 1; i++){
+			context = NavElements[i];
+			console.log(context)
+		};
+		bind(SetOpacity,context);
+		};
 	  
 	  
 };
