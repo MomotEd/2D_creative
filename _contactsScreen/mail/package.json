@@ -1,0 +1,17 @@
+{
+  "name": "node1",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.13.4",
+    "nodemailer": "latest",
+    "nodemailer-smtp-transport":"latest"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Node-Mailer ===========",
+  "main": "Server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

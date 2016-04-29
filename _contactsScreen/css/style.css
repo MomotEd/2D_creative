@@ -21,7 +21,7 @@ body {
 	position: absolute; /* Абсолютное позиционирование */
 	top: 20px; /* Положение от верхнего края */
 	right: 5%; /* Положение от правого края */
-	background: #0b0b13; /* Цвет фона */
+ /* Цвет фона */
 	padding: 10px; /* Поля вокруг текста */
 }
 
@@ -34,7 +34,6 @@ body {
 	flex-wrap: wrap;
 }
 .box-base {
-	background: #222;
 	min-height: 430px;
 	font-size: 5rem;
 	color: #eee;
@@ -53,14 +52,12 @@ body {
 	flex-direction: column;
 }
 .box-itm {
-	background: #222;
 	min-height: 200px;
 	color: #eee;
 	margin-bottom: 30px;
 	flex: auto;
 	flex-direction: column;
 	border: 2px solid #c4c4c4;
-
 	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
@@ -68,13 +65,12 @@ body {
 }
 
 .box-social{
-	background: #222;
+
 	min-height: 100px;
 	font-size: 5rem;
 	color: #eee;
 	flex: auto;
 	margin-bottom: 30px;
-
 	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
@@ -92,14 +88,12 @@ body {
 
 .box-mail {
 	width: inherit;
-	background: #222;
 	min-height: 50px;
 	max-height: 50px;
 	font-size: 100%;
 	color: #eee;
 	margin-bottom: 30px;
 	flex: auto;
-
 	display: -webkit-flex;
 	display: flex;
 	align-items: center;
@@ -107,32 +101,29 @@ body {
 
 .box-text {
 	width: inherit;
-	background: #222;
 	min-height: 50px;
 	font-size: 5rem;
 	color: #eee;
 	margin-bottom: 30px;
 	flex: auto;
 	border: 2px solid #c4c4c4;
-
 	display: -webkit-flex;
 	display: flex;
-	align-items: center;
+	align-content: flex-end;
 }
 
 .box-submit {
-	width: inherit;
-	background: #222;
-	min-height: 50px;
+	width: 20%;
+	height: 5%;
 	font-size: 5rem;
 	color: #eee;
-	margin-bottom: 30px;
-	flex: auto;
+    align-self: flex-end;
 	border: 2px solid #c4c4c4;
-
+	font-size: 2rem;
 	display: -webkit-flex;
 	display: flex;
-	align-items: center;
+	justify-content:center;
+	align-content: center;
 }
 
 .input-mail{
