@@ -55,14 +55,14 @@ h1,h2,h3,h4,h5,h6{margin:0;}
     .nav-container{align-items:center;align-content:center;display:flex;flex-flow:row nowrap;height:100vh;justify-content:center;padding:0 2rem;position:fixed;width:14rem;z-index:777;}
         .nav{position:relative;display: none;top: 10%;}
             .nav span{display:block;font:400 .875rem/1.5 "fira sans";letter-spacing:.05rem;padding:.5rem 0;text-transform:uppercase;}
+				
                 .nav span a{color:#636363;transition:.3s color;font-size: 18px;}
                 .nav span a:hover{color:#fff;}
-
                 .nav .half-step a{color:#909090;}
-				.nav .current a{color:#fff;}
-                .nav .current a:before{content:"> ";}
+				.nav .current a{color:#fff;}  
 
-    .section{height:100vh;width:100%;}
+
+		.section{height:100vh;width:100%;}
         .section-content{margin:0 0 0 20rem;}
 
     .section-intro{position:relative;}

@@ -4,7 +4,9 @@ function bind(func, context) {
 };
 
 SetOpacity = function (){
-	$('.nav').children().removeClass();
+	
+	$('.nav').children().removeClass(); 
+	$('.nav').find('img').remove();
 	$(this).addClass("current");
 	$(this).prev().addClass("half-step");
 	$(this).next().addClass("half-step");
@@ -12,6 +14,15 @@ SetOpacity = function (){
 	else if ($(this).text()=='ВИДЕО'){$.scrollTo('#section-video', 800);}
 	else if ($(this).text()=='СОТРУДНИЧЕСТВО'){$.scrollTo('#section-about', 800);}
 	else if ($(this).text()=='КОНТАКТЫ'){$.scrollTo('#section-contacts', 800);}
+
+    var img = document.createElement('img');
+    img.setAttribute('src','./images/compas.png');
+	console.log(this);
+	var firstchild = this.childNodes[0];
+	this.insertBefore(img,firstchild);
+	$('.nav').find('img').rotate({animateTo:360, duration:2000})
+
+
 };
 
 $(document).ready(function() {
@@ -26,20 +37,20 @@ window.onwheel = function(e) {
 	  var delta = e.deltaY || e.detail || e.wheelDelta;
 	  
 	  if (delta > 0){
-		context = $('.current').next();
+		contextArr = $('.current').next();
+		context = contextArr[0];
 	  }
 	  else {
-		  context = $('.current').prev();
+		  contextArr = $('.current').prev();
+		  context = contextArr[0];
 	  }
 	  
-	  console.log(context.text());
-	  if (context.text()!==''){
+	  if (contextArr.text()!==''){
 		bind(SetOpacity,context);}
 	  else {
 		let NavElements = $('.nav').children();
 		for (let i=0; i < 1; i++){
 			context = NavElements[i];
-			console.log(context)
 		};
 		bind(SetOpacity,context);
 		};  
