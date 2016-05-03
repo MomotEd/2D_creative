@@ -42,7 +42,5 @@ window.onwheel = function(e) {
 			console.log(context)
 		};
 		bind(SetOpacity,context);
-		};
-	  
-	  
+		};  
 };
