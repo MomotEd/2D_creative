@@ -15,9 +15,9 @@ SetOpacity = function (){
 	else if ($(this).text()=='СОТРУДНИЧЕСТВО'){$.scrollTo('#section-about', 800);}
 	else if ($(this).text()=='КОНТАКТЫ'){$.scrollTo('#section-contacts', 800);}
 
+
     var img = document.createElement('img');
     img.setAttribute('src','./images/compas.png');
-	console.log(this);
 	var firstchild = this.childNodes[0];
 	this.insertBefore(img,firstchild);
 	$('.nav').find('img').rotate({animateTo:360, duration:2000})

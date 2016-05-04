@@ -82,8 +82,7 @@ h1,h2,h3,h4,h5,h6{margin:0;}
     
     .section-about-us{  position:relative;}
       .section-about-us .picture-div {position:absolute; align-items:center;align-content:center;display:flex;flex-flow:row nowrap; justify-content:center; align-self:center; margin-top: 6.25rem; margin-left: 0rem; }
-      .text-div{position:absolute; align-items:center;align-content:center;display:flex;flex-flow:row nowrap; justify-content:flex-start; align-self:flex-start; margin-top: 25%; margin-left: 30rem;}
-
+      .text-div{position:absolute; align-items:center;align-content:center;display:flex;flex-flow:row nowrap; justify-content:flex-start; align-self:flex-start; margin-top: 25%; margin-left: 30rem; margin-right: 15rem; text-align:justify; line-height: 2;}
     .section-contact{}
 
 /* some whrong css */
