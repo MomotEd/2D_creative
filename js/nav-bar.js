@@ -3,6 +3,17 @@ function bind(func, context) {
 	return func.call(context);
 };
 
+function CreateImg(){
+	context = $('.current')[0];
+	
+	// creating image before nav text and start rotate it 
+    var img = document.createElement('img');
+    img.setAttribute('src','./images/compas.png');
+	var firstchild = context.childNodes[0];
+	context.insertBefore(img,firstchild);
+	$('.nav').find('img').rotate({animateTo:360, duration:2000})
+}
+
 SetOpacity = function (){
 	
 	$('.nav').children().removeClass(); 
@@ -14,19 +25,14 @@ SetOpacity = function (){
 	else if ($(this).text()=='ВИДЕО'){$.scrollTo('#section-video', 800);}
 	else if ($(this).text()=='СОТРУДНИЧЕСТВО'){$.scrollTo('#section-about', 800);}
 	else if ($(this).text()=='КОНТАКТЫ'){$.scrollTo('#section-contacts', 800);}
-
-
-    var img = document.createElement('img');
-    img.setAttribute('src','./images/compas.png');
-	var firstchild = this.childNodes[0];
-	this.insertBefore(img,firstchild);
-	$('.nav').find('img').rotate({animateTo:360, duration:2000})
-
+	CreateImg();
 
 };
 
 $(document).ready(function() {
 	setTimeout ("$('.logo').fadeIn('slow');", 1000);
+	// set compas img on current nav item before we will see it
+	CreateImg();
 	setTimeout ("$('.nav').fadeIn('slow');", 1500);
 	setTimeout ("$('.scroll-container').fadeIn('slow');", 2000);
 });
