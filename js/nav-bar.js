@@ -21,15 +21,15 @@ SetOpacity = function (){
 	$(this).addClass("current");
 	$(this).prev().addClass("half-step");
 	$(this).next().addClass("half-step");
-	if ($(this).text()=='РОМБ') {$.scrollTo('#section-intro', 800);}
-	else if ($(this).text()=='ВИДЕО'){$.scrollTo('#section-video', 800);}
-	else if ($(this).text()=='СОТРУДНИЧЕСТВО'){$.scrollTo('#section-about', 800);}
-	else if ($(this).text()=='КОНТАКТЫ'){$.scrollTo('#section-contacts', 800);}
+    $.scrollTo($(this).children("a").attr('href'), 800);
 	CreateImg();
 
 };
 
 $(document).ready(function() {
+	    $(".page nav span").click(function() {
+	    	bind(SetOpacity, this);
+    });
 	setTimeout ("$('.logo').fadeIn('slow');", 1000);
 	// set compas img on current nav item before we will see it
 	CreateImg();
