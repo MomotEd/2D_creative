@@ -82,6 +82,8 @@ h1,h2,h3,h4,h5,h6{margin:0;}
     
     .section-about-us{  position:relative;}
       .section-about-us .picture-div {position:absolute; align-items:center;align-content:center;display:flex;flex-flow:row nowrap; justify-content:center; align-self:center; margin-top: 6.25rem; margin-left: 0rem; }
+	  .section-about-us .picture-div .filter {top: 0px;left: 0px; z-index: 1;position: absolute; background-color: rgba(147, 87, 185, .15); width:742px; height:544px;}
+
       .text-div{position:absolute; align-items:center;align-content:center;display:flex;flex-flow:row nowrap; justify-content:flex-start; align-self:flex-start; margin-top: 25%; margin-left: 30rem; margin-right: 15rem; text-align:justify; line-height: 2;}
     .section-contact{}
 

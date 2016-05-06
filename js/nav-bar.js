@@ -1,4 +1,6 @@
 ;
+counter = 0;
+
 function bind(func, context) {
 	return func.call(context);
 };
@@ -27,8 +29,8 @@ SetOpacity = function (){
 };
 
 $(document).ready(function() {
-	    $(".page nav span").click(function() {
-	    	bind(SetOpacity, this);
+	$(".page nav span").click(function() {
+		bind(SetOpacity, this);
     });
 	setTimeout ("$('.logo').fadeIn('slow');", 1000);
 	// set compas img on current nav item before we will see it
@@ -42,15 +44,27 @@ window.onwheel = function(e) {
 	  
 	  var delta = e.deltaY || e.detail || e.wheelDelta;
 	  
-	  if (delta > 0){
+	  if (counter > 3){
 		contextArr = $('.current').next();
 		context = contextArr[0];
+		counter = 0;
+		FinNextElement(contextArr, context);
 	  }
-	  else {
+	  else if (counter < -3) {
 		  contextArr = $('.current').prev();
 		  context = contextArr[0];
+		  counter = 0;
+		  FinNextElement(contextArr, context);
+	  }
+	  else {
+		  counter = counter + delta;
 	  }
 	  
+ 
+};
+
+function FinNextElement(contextArr, context){
+	
 	  if (contextArr.text()!==''){
 		bind(SetOpacity,context);}
 	  else {
@@ -59,5 +73,5 @@ window.onwheel = function(e) {
 			context = NavElements[i];
 		};
 		bind(SetOpacity,context);
-		};  
-};
+		}; 	
+}
