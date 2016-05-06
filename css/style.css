@@ -69,8 +69,7 @@ h1,h2,h3,h4,h5,h6{margin:0;}
         .section-intro .section-content{align-items:center;align-content:center;display:flex;flex-flow:row nowrap;height:100vh;justify-content:center;width:50%;}
         .section-intro .section-content .logo{align-self:center;display: none;}
             .section-intro .section-content img{height:auto;max-width:24rem;position:relative;vertical-align:top;width:100%;}
-            .section-intro .section-content .logo:after{content:"Creative Association";margin:0 0 0 2rem;position:absolute;top:50%;}
-
+			.section-intro .section-content text {margin:0 0 0 2rem;position:absolute; text-transform:uppercase;font-weight:bold; font-size:25px; text-align:justify;}
         .section-intro .scroll-container{bottom:2rem;display: none;left:0;position:absolute;text-align:center;width:100%;}
         /*    .section-intro .scroll-container img{height:auto;vertical-align:top;width:1.5rem;}*/
 
@@ -82,7 +81,7 @@ h1,h2,h3,h4,h5,h6{margin:0;}
     
     .section-about-us{  position:relative;}
       .section-about-us .picture-div {position:absolute; align-items:center;align-content:center;display:flex;flex-flow:row nowrap; justify-content:center; align-self:center; margin-top: 6.25rem; margin-left: 0rem; }
-	  .section-about-us .picture-div .filter {top: 0px;left: 0px; z-index: 1;position: absolute; background-color: rgba(147, 87, 185, .15); width:742px; height:544px;}
+	  .section-about-us .picture-div .filter {top: 0px;left: 0px; z-index: 1;position: absolute; background-color: rgba(23, 23, 37, .15); width:742px; height:544px;}
 
       .text-div{position:absolute; align-items:center;align-content:center;display:flex;flex-flow:row nowrap; justify-content:flex-start; align-self:flex-start; margin-top: 25%; margin-left: 30rem; margin-right: 15rem; text-align:justify; line-height: 2;}
     .section-contact{}

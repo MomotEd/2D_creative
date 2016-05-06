@@ -16,6 +16,10 @@ function CreateImg(){
 	$('.nav').find('img').rotate({animateTo:360, duration:2000})
 }
 
+function CreateText(){
+	$('.logo').after('<text>Creative</text> <br><br> <text>Association</text>');
+}
+
 SetOpacity = function (){
 	
 	$('.nav').children().removeClass(); 
@@ -33,6 +37,7 @@ $(document).ready(function() {
 		bind(SetOpacity, this);
     });
 	setTimeout ("$('.logo').fadeIn('slow');", 1000);
+	setTimeout ("CreateText();", 1200);
 	// set compas img on current nav item before we will see it
 	CreateImg();
 	setTimeout ("$('.nav').fadeIn('slow');", 1500);
