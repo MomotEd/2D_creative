@@ -17,7 +17,7 @@ function CreateImg(){
 }
 
 function CreateText(){
-	$('.logo').after('<text>Creative</text> <br><br> <text>Association</text>');
+	$('.logo').after('<text>C r e a t i v e <br> Association</text><br>');
 }
 
 SetOpacity = function (){
