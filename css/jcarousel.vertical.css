@@ -2,6 +2,7 @@
     margin: 20px auto;
     position: relative;
     border: 10px solid #fff;
+	top:50%;
     width: 600px;
     height: 400px;
     -webkit-border-radius: 5px;
@@ -76,11 +77,11 @@
 }
 
 .jcarousel-control-prev {
-    left: -50px;
+    left: 10px;
 }
 
 .jcarousel-control-next {
-    right: -50px;
+    right: 10px;
 }
 
 .jcarousel-control-prev:hover span,
