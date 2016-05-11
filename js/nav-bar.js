@@ -29,13 +29,14 @@ SetOpacity = function (){
 	$(this).next().addClass("half-step");
     $.scrollTo($(this).children("a").attr('href'), 800);
 	CreateImg();
-
+	setTimeout ("$('.page').on('wheel', Scrolling);", 500);
 };
 
 $(document).ready(function() {
 	$(".page nav span").click(function() {
 		bind(SetOpacity, this);
     });
+	$('.page').on('wheel', Scrolling);
 	setTimeout ("$('.logo').fadeIn('slow');", 1000);
 	setTimeout ("CreateText();", 1200);
 	// set compas img on current nav item before we will see it
@@ -44,28 +45,26 @@ $(document).ready(function() {
 	setTimeout ("$('.scroll-container').fadeIn('slow');", 2000);
 });
 
-window.onwheel = function(e) {		
+function Scrolling(e){
 	  e = e || window.event;
-	  
-	  var delta = e.deltaY || e.detail || e.wheelDelta;
-	  
-	  if (counter > 3){
+	  var delta = e.deltaY || e.detail || e.wheelDelta||e.originalEvent.deltaY;
+	  if (counter > 100){
+		$('.page').off('wheel', Scrolling);
 		contextArr = $('.current').next();
 		context = contextArr[0];
 		counter = 0;
 		FinNextElement(contextArr, context);
 	  }
-	  else if (counter < -3) {
-		  contextArr = $('.current').prev();
-		  context = contextArr[0];
-		  counter = 0;
-		  FinNextElement(contextArr, context);
+	  else if (counter < -100) {
+		$('.page').off('wheel', Scrolling);
+		contextArr = $('.current').prev();
+		context = contextArr[0];
+		counter = 0;
+		 FinNextElement(contextArr, context);
 	  }
 	  else {
 		  counter = counter + delta;
 	  }
-	  
- 
 };
 
 function FinNextElement(contextArr, context){
