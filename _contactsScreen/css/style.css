@@ -136,7 +136,7 @@ body {
 
 .input-mail{
 	width: 100%;
-	height: 100%;
+	height: 90%;
     background-color: #333344;
 	border:0;
 	color: #ffffff;
@@ -144,7 +144,7 @@ body {
 }
 .input-text{
     width: 100%;
-	height: 97%;
+	height: 7%;
 	background-color: #333344;
 	border:0;
 	color: #ffffff;
